@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Divine Constructions (DC)</h1>
+    <p>Creating Innovating and stunning designs</p>
+    </header>
+    <section class="about">
+        <h2>About DC</h2>
+        <img src="Public/DC.jpg"
+        <p>Hello! DIC specializes in marketing, mining and Constructions.</p>
+    </section>
+
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <img src="Public/IMG-20250525-WA0171.jpg" width="200" onclick="openModal(this.src)">
+            <img src="Public/IMG-20250525-WA0173.jpg" width="200" onclick="openModal(this.src)">
+            <img src="Public/IMG-20250525-WA0176.jpg" width="200" onclick="openModal(this.src)">
+            <img src="Public/IMG-20250525-WA0178.jpg" width="200"onclick="openModal(this.src)">
+            <img src="Public/IMG-20250525-WA0183.jpg" width="200"onclick="openModal(this.src)">
+                <img src="Public/IMG-20250525-WA0188.jpg" width="200" onclick="openModal(this.src)">
+                <img src="Public/IMG-20250525-WA0189.jpg" width="200" onclick="openModal(this.src)">
+        </div>
+    </section>
+    <section class="services">
+        <h2>Contact Us</h2>
+        <p> phone📞: +234-802-929-3142</p>
+    </section>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">$times;</span>
+    </div>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #4f4f4f;
+        }
+        header{
+            background-color: #a1a1a1;
+            color: blueviolet;
+            padding: 50px;
+        }
+        section{
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: antiquewhite;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px 6px rgba(0, 0, 0.1);
+        }
+        .gallery{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: mandatory;
+        }
+        .gallery img{
+            width: 100%;
+            height: 70px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px 6px rgba(195, 189, 231, 0.795);
+            flex: 0 0 100;
+            scroll-snap-align: start;
+            padding: 20px;
+            font-size: 22px;
+            text-align: center;
+            background: rgb(10, 65, 65);
+        }
+        .portfolio img{
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio img:active{
+            transform: scale(0.95);
+            box-shadow: 0 4px 10px rgba(0, 0, 0.3);
+        }
+        .portfolio img:hover{
+            transform: scale(1.05);
+        }
+        .modal{
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        .about img{
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+        }
+        .close{
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: antiquewhite;
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
